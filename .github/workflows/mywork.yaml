@@ -1,0 +1,9 @@
+name: Github Actions Demo
+on: [push]
+jobs:
+  Test:
+    runs-on: windows
+    steps:
+        - run: echo "The Job was automatically triggered by a push event."
+        - run: python master.py
+        
