@@ -3,7 +3,7 @@ on: [push]
 jobs:
   Test:
     runs-on: ubuntu-latest
-    steps:g
+    steps:
         - uses: actions/checkout@v2
         - run: echo "The Job was automatically triggered by a push event again."
         - run: python master.py
