@@ -1,9 +1,12 @@
 name: Merge CI
-on: [pull request]
+on: [ pull_request ]
 jobs:
   Test:
-    runs-on: [ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest ]
     steps:
         - uses: actions/checkout@v2
-        - run: echo "The Job was automatically triggered by a merge event again."
+        - run: echo "The Job was automatically triggered by a pull request event again."
         - run: python master.py
