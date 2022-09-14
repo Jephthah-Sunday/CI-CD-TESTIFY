@@ -1,10 +1,9 @@
-name: Github Actions Demonstration
+name: Github Actions Demo
 on: [push]
 jobs:
   Test:
-    runs-on: ubuntu-latest
-    steps:g
-        - uses: actions/checkout@v2
+    runs-on: windows
+    steps:
         - run: echo "The Job was automatically triggered by a push event."
         - run: python master.py
         
